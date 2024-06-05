@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 50%;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        margin-top: 50px;
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      .form-group input[type="radio"],
+      .form-group input[type="checkbox"] {
+        width: auto;
+      }
+      .form-group button {
+        width: 100%;
+        padding: 10px;
+        background: #333;
+        color: #fff;
+        cursor: pointer;
+      }
+      .form-group button:hover {
+        background: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Registration Form</h2>
+      <form action="/submit_registration" method="post">
+        <div class="form-group">
+          <label for="full_name">Full Name</label>
+          <input type="text" required />
+        </div>
+        <div class="form-group">
+          <label for="Username">Username</label>
+          <input type="text" />
+        </div>
+        <div class="form-group">
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" />
+          </div>
+          <div class="form-group">
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob" required />
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label>
+        </div>
+        <div class="form-group">
+          <label for="hobies">Hobbies</label>
+          <input type="checkbox" />
+          <label for="reading">Reading</label>
+          <input type="checkbox" />
+          <label for="travelling">Travelling</label>
+          <input type="checkbox" />
+          <label for="cooking">Cooking</label>
+          <input type="checkbox" />
+          <label for="other">Other</label>
+        </div>
+        <div class="form-group">
+          <label for="profilepicture">Profile picture</label>
+          <input type="file" />
+        </div>
+
+        <div class="form-group">
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="">Select a country</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">UK</option>
+            <option value="Australia">Australia</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="bio">Bio</label>
+          <textarea id="address" name="address" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="agreetoterm"> Agree to terms and Conditions </label>
+          <input type="checkbox" />
+        </div>
+
+        <div class="form-group">
+          <button type="submit">Register</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
